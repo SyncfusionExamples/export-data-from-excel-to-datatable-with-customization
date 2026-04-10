@@ -1,6 +1,12 @@
 # Export data from Excel to DataTable with Customization in C#
 
-This repository contains both the .NET Core and .NET Framework projects that demonstrates the export of data from Excel to DataTable with customization.
+This repository demonstrates how to export data from Excel worksheets into .NET DataTable objects using Syncfusion XlsIO, with support for both .NET Core and .NET Framework. It provides examples of simple export operations as well as advanced customization through event handling. The project highlights how developers can read structured data from Excel files and transform it into DataTable objects for further processing, reporting, or integration with other systems.
+
+The samples include two approaches. The first is a straightforward export where the worksheet’s used range is read and converted into a DataTable with column names preserved. This method is shown in both .NET Core and .NET Framework projects (Export-data-from-Excel-to-DataTable) and is useful for quickly transferring Excel data into memory for application use. The second approach introduces customization by handling the ExportDataTableEvent. This event allows developers to control how each cell is processed during export. For example, rows can be skipped if they contain specific values such as “Owner,” the export process can be stopped based on conditions like a particular row and column index, or cell values can be replaced in the DataTable without altering the original Excel document (e.g., replacing “Mexico D.F.” with “Mexico”). These customization options provide flexibility for handling business rules and data cleansing during the export process.
+
+The repository contains separate projects for .NET Core and .NET Framework, ensuring compatibility across environments. Both versions demonstrate the same functionality: opening Excel files (Sample.xlsx), accessing worksheets, exporting data to DataTable, and saving the workbook back to disk (ExportToDT.xlsx). Developers can adapt these examples to their own data sources and customize the export logic to meet specific requirements.
+
+By following the examples in this repository, developers can learn how to integrate Excel-to-DataTable conversion into their applications, enabling seamless data extraction and transformation. The customization features make it possible to enforce rules such as skipping unwanted rows, stopping export at certain conditions, or modifying values during export. This provides a powerful and efficient way to bridge Excel data with .NET applications. The repository serves as a practical reference for anyone looking to automate Excel data handling in C#, offering both simple and advanced approaches to exporting data with Syncfusion XlsIO.
 
 ## Blog Reference
 
